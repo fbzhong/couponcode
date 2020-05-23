@@ -19,7 +19,7 @@ package couponcode_test
 import (
 	"fmt"
 
-	"github.com/captaincodeman/couponcode"
+	"github.com/fbzhong/couponcode"
 )
 
 func main() {
@@ -103,20 +103,12 @@ side validation.
 The easiest way to get it is via `go get`:
 
 ``` bash
-$ go get -u github.com/captaincodeman/couponcode
+$ go get -u github.com/fbzhong/couponcode
 ```
 
 # Build
 
-The default build uses the random number generator from the `math/rand` package which generates consistent random numbers
-for a given seed which can be changed. This is helpful for examples and when testing and, assuming you use a random seed
-it may be good enough for live use if you store codes in a database and mark them as consumed.
-
-There is a risk though that someone could work out the seed value and use it to generate their own valid codes so there is
-an implementation that uses the `crypto/rand` package for more secure random number generation. This can be used by adding
-the conditional compilation build tag `coupon-crypto` to your app build command, e.g.
-
-    go build -tags coupon-crypto
+The default build uses the random number generator from the `crypto/rand` package for more secure random number generation.
 
 # Tests
 
@@ -128,6 +120,7 @@ $ go test
 
 # Author
 
+* Written by [Caption Codeman](https://github.com/CaptainCodeman)
 * Written by [Simon Green](http://captaincodeman.com)
 
 # Inspired By

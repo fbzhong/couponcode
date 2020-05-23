@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/captaincodeman/couponcode"
+	"github.com/fbzhong/couponcode"
 )
 
 func ExampleGenerate() {

@@ -1,4 +1,4 @@
-// +build coupon-crypto
+// + build !mathrand
 
 package couponcode
 
